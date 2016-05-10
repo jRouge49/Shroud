@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\Engine.cs" />
      <Compile Include="Assets\Scripts\GameObjectUtil.cs" />
+     <Compile Include="Assets\Scripts\LightSwitch.cs" />
      <Compile Include="Assets\Scripts\ObjectPool.cs" />
      <Compile Include="Assets\Scripts\RecycleGameObject.cs" />
      <Compile Include="Assets\Scripts\SnappingCrane.cs" />
