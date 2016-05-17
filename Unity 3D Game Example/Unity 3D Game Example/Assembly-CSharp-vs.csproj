@@ -50,12 +50,16 @@
      <Compile Include="Assets\Scripts\Crane.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\Engine.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GameObjectUtil.cs" />
      <Compile Include="Assets\Scripts\LightSwitch.cs" />
      <Compile Include="Assets\Scripts\ObjectPool.cs" />
      <Compile Include="Assets\Scripts\RecycleGameObject.cs" />
+     <Compile Include="Assets\Scripts\Respawn.cs" />
      <Compile Include="Assets\Scripts\SnappingCrane.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\StopTime.cs" />
+     <Compile Include="Assets\Scripts\TimeManager.cs" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\sonicrunner\sonicrunner\Assets\Scripts\TimeManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameManager.cs">
     <Files>
-      <File FileName="..\..\..\sonicrunner\sonicrunner\Assets\Scripts\TimeManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="73" Column="4" />
+      <File FileName="Assets\Scripts\TimeManager.cs" Line="25" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
