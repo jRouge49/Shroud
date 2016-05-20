@@ -36,9 +36,9 @@ public class GameManager : MonoBehaviour {
 
 		Time.timeScale = 0;
 
-		bestTime = PlayerPrefs.GetFloat ("BestTime");
+		bestTime = (PlayerPrefs.GetFloat ("BestTime")+400f);
 
-		bestTime = PlayerPrefs.GetFloat ("BestTime");
+		stopTime = false;
 	}
 	
 	// Update is called once per frame
@@ -48,10 +48,7 @@ public class GameManager : MonoBehaviour {
 
 		if (Time.timeScale == 0) {
 
-			//if(Input.GetKeyDown(KeyCode.W)){
-
 			timeManager.ManipulateTime (1, 1f);
-			//}
 		}
 
 		 else if (stopTime == false){
@@ -72,14 +69,16 @@ public class GameManager : MonoBehaviour {
 		//stopTime = false;
 	//}
 	
-	void OnPlayerKilled(){
+	void OnPlayerFinished(){
 
-		if (timeElapsed > bestTime) {
-			bestTime = timeElapsed;
-			PlayerPrefs.SetFloat("BestTime", bestTime);
-			beatBestTime = true;
+			var textColor = beatBestTime ? "#FF0" : "#FFF";
+
+			if (timeElapsed < bestTime) {
+				bestTime = timeElapsed;
+				PlayerPrefs.SetFloat ("BestTime", bestTime);
+				beatBestTime = true;
+			}
 		}
-	}
 
 	string FormatTime(float value){
 		TimeSpan t = TimeSpan.FromSeconds (value);
