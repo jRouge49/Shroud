@@ -10,6 +10,7 @@ public class LightSwitch : MonoBehaviour {
 
 	private float timeElapsed = 0f;
 	private TimeManager batteryDrain;
+//	private BatteryDrainStop batteryDrainStop;
 	private float fullBattery = 100f;
 	private bool batteryDead;
 
@@ -17,31 +18,33 @@ public class LightSwitch : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		batteryDrain = GetComponent<TimeManager> ();
+		//batteryDrainStop = GetComponent<BatteryDrainStop> ();
 		batteryDead = false;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (flashLight.activeInHierarchy == true) {
-			timeElapsed += Time.deltaTime;
-			batteryLife.text = "BATTERY LIFE: "+(fullBattery - (1 * timeElapsed));
+				timeElapsed += Time.deltaTime;
+				batteryLife.text = "BATTERY LIFE: " + (fullBattery - (1 * timeElapsed));
 		}
 
-		if (fullBattery - timeElapsed <= 0){
-			flashLight.SetActive(false);
+		if (fullBattery - timeElapsed <= 0) {
+			flashLight.SetActive (false);
 			batteryLife.text = "BATTERY LIFE: 0";
 			batteryDead = true;
 		}
-
+	
 		if (Input.GetKeyDown (KeyCode.E)) {
-			if(batteryDead == false && flashLight.activeInHierarchy ==false){
-				flashLight.SetActive(true);
-			}
-			else{ //if(flashLight.activeInHierarchy == true){
-				flashLight.SetActive(false);
-			}
+			if (batteryDead == false && flashLight.activeInHierarchy == false) {
+				flashLight.SetActive (true);
+			} 
+			else {
+				flashLight.SetActive (false);
 			}
 
+		}
 	}
 
 	string FormatBattery(float value){

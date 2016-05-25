@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
 	private bool gameStarted;
 	public bool stopTime;
 	private TimeManager timeManager;
+	//private LightSwitch lightSwitch;
 	//private StopTime finishTime;
 	private GameObject player;
 	private bool beatBestTime;
@@ -27,6 +28,8 @@ public class GameManager : MonoBehaviour {
 		timeManager = GetComponent<TimeManager> ();
 
 		source = GetComponent<AudioSource>();
+
+		//lightSwitch = GetComponent<LightSwitch> ();
 
 		//finishTime = GetComponent<StopTime> ();
 	}
@@ -49,12 +52,14 @@ public class GameManager : MonoBehaviour {
 		if (Time.timeScale == 0) {
 
 			timeManager.ManipulateTime (1, 1f);
-		}
-
-		 else if (stopTime == false){
+		} 
+		else if (stopTime == false) {
 			timeElapsed += Time.deltaTime;
-			scoreText.text = "TIME: "+FormatTime(timeElapsed);
-		}
+			scoreText.text = "TIME: " + FormatTime (timeElapsed);
+		} 
+		//else {
+			//lightSwitch.
+		//}
 	}
 
 	void OnTriggerEnter(Collider other) {
