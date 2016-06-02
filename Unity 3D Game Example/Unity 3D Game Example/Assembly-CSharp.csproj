@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\ObjectPool.cs" />
      <Compile Include="Assets\Scripts\RecycleGameObject.cs" />
      <Compile Include="Assets\Scripts\Respawn.cs" />
+     <Compile Include="Assets\Scripts\RulesOff.cs" />
      <Compile Include="Assets\Scripts\SnappingCrane.cs" />
      <Compile Include="Assets\Scripts\Spawner.cs" />
      <Compile Include="Assets\Scripts\StopTime.cs" />
